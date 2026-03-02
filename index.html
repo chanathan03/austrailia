@@ -1208,6 +1208,7 @@ const counts = { booking: 0, packing: 0 };
 function toggle(el, group) {
   el.classList.toggle('checked');
   updateProgress(group);
+  saveChecklist(group);
 }
 
 function updateProgress(group) {
@@ -1220,6 +1221,41 @@ function updateProgress(group) {
 }
 
 // Budget logic
+function saveBudget() {
+  const rows = [];
+  document.querySelectorAll('#budget-body tr').forEach(tr => {
+    const inputs = tr.querySelectorAll('input');
+    if (inputs.length >= 3) {
+      rows.push({
+        cat: tr.querySelector('.cat-pill') ? tr.querySelector('.cat-pill').className : '',
+        catText: tr.querySelector('.cat-pill') ? tr.querySelector('.cat-pill').textContent : 'Other',
+        desc: inputs[0].value,
+        amount: inputs[1].value,
+        notes: inputs[2] ? inputs[2].value : ''
+      });
+    }
+  });
+  localStorage.setItem('budget_rows', JSON.stringify(rows));
+}
+
+function loadBudget() {
+  const saved = localStorage.getItem('budget_rows');
+  if (!saved) return;
+  const rows = JSON.parse(saved);
+  const tbody = document.getElementById('budget-body');
+  tbody.innerHTML = '';
+  rows.forEach(row => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><span class="${row.cat}">${row.catText}</span></td>
+      <td><input class="budget-input" value="${row.desc}"></td>
+      <td><input class="budget-input" type="number" value="${row.amount}" oninput="calcBudget(); saveBudget()"></td>
+      <td><input class="budget-input" value="${row.notes}"></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
 function calcBudget() {
   const inputs = document.querySelectorAll('#budget-body input[type="number"]');
   let total = 0;
@@ -1235,11 +1271,37 @@ function addRow() {
   tr.innerHTML = `
     <td><span class="cat-pill cat-food">Other</span></td>
     <td><input class="budget-input" value="New item" placeholder="Description"></td>
-    <td><input class="budget-input" type="number" value="0" oninput="calcBudget()"></td>
+    <td><input class="budget-input" type="number" value="0" oninput="calcBudget(); saveBudget()"></td>
     <td><input class="budget-input" value="" placeholder="Notes"></td>
   `;
   tbody.appendChild(tr);
   calcBudget();
+  saveBudget();
+}
+
+// Patch existing budget inputs to also save on change
+function patchBudgetInputs() {
+  document.querySelectorAll('#budget-body input').forEach(input => {
+    input.addEventListener('input', () => { calcBudget(); saveBudget(); });
+  });
+}
+
+// Checklist persistence
+function saveChecklist(group) {
+  const states = [];
+  document.querySelectorAll(`#${group} .check-item`).forEach(el => {
+    states.push(el.classList.contains('checked'));
+  });
+  localStorage.setItem(`checklist_${group}`, JSON.stringify(states));
+}
+
+function loadChecklist(group) {
+  const saved = localStorage.getItem(`checklist_${group}`);
+  if (!saved) return;
+  const states = JSON.parse(saved);
+  document.querySelectorAll(`#${group} .check-item`).forEach((el, i) => {
+    if (states[i]) el.classList.add('checked');
+  });
 }
 
 // Slang search
@@ -1252,7 +1314,11 @@ function filterSlang() {
 
 // Init
 window.onload = () => {
+  loadBudget();
+  patchBudgetInputs();
   calcBudget();
+  loadChecklist('booking');
+  loadChecklist('packing');
   updateProgress('booking');
   updateProgress('packing');
 };
