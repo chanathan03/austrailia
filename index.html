@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)file:///Users/jkchan/Downloads/australia-second-brain_4.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Australia Family Trip 2026–27 — Second Brain</title>
+<link href="./index_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --sand: #F5EDD8;
+    --deep: #1A2E1A;
+    --ocean: #1B4F72;
+    --coral: #E05C3A;
+    --gold: #C9922A;
+    --sage: #5C7A5C;
+    --light: #FDFAF3;
+    --muted: #8A7B6A;
+    --card: #FFFFFF;
+    --border: rgba(26,46,26,0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--sand);
+    color: var(--deep);
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .hero {
+    background: var(--deep);
+    color: var(--sand);
+    padding: 48px 40px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,146,42,0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(27,79,114,0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-flag {
+    font-size: 36px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: rgba(245,237,216,0.65);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .hero-dates {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 100px;
+    padding: 8px 18px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--sand);
+  }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--coral); display: inline-block; }
+
+  /* NAV TABS */
+  .nav-wrap {
+    background: var(--deep);
+    padding: 0 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+  }
+  .nav-wrap::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    background: none;
+    border: none;
+    color: rgba(245,237,216,0.5);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 14px 18px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all 0.2s;
+    letter-spacing: 0.03em;
+  }
+  .tab-btn:hover { color: var(--sand); }
+  .tab-btn.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  /* MAIN LAYOUT */
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 24px 80px; }
+
+  .section { display: none; }
+  .section.active { display: block; }
+
+  /* SECTION HEADER */
+  .sec-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .sec-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .sec-badge {
+    background: var(--coral);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ITINERARY */
+  .city-block { margin-bottom: 36px; }
+  .city-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .city-label h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .city-label .city-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .tag-sydney { background: rgba(27,79,114,0.12); color: var(--ocean); }
+  .tag-cairns { background: rgba(92,122,92,0.12); color: var(--sage); }
+  .tag-melb { background: rgba(224,92,58,0.12); color: var(--coral); }
+  .tag-brisbane { background: rgba(201,146,42,0.12); color: var(--gold); }
+
+  .day-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .day-card:hover { box-shadow: 0 4px 20px rgba(26,46,26,0.08); }
+  .day-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    cursor: pointer;
+  }
+  .day-num {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--deep);
+    color: var(--sand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .day-info { flex: 1; }
+  .day-info strong { display: block; font-size: 0.95rem; font-weight: 600; }
+  .day-info span { font-size: 0.82rem; color: var(--muted); }
+  .day-chevron {
+    color: var(--muted);
+    font-size: 0.8rem;
+    transition: transform 0.25s;
+  }
+  .day-card.open .day-chevron { transform: rotate(180deg); }
+  .day-body {
+    display: none;
+    padding: 0 20px 16px 74px;
+  }
+  .day-card.open .day-body { display: block; }
+  .activity {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+  }
+  .act-time {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 500;
+    min-width: 58px;
+    padding-top: 2px;
+  }
+  .act-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+  .act-text { font-size: 0.88rem; line-height: 1.5; }
+  .act-tip {
+    font-size: 0.78rem;
+    color: var(--coral);
+    margin-top: 2px;
+    font-weight: 500;
+  }
+
+  /* CHECKLIST (Booking + Packing) */
+  .checklist-group { margin-bottom: 28px; }
+  .checklist-group h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .check-item:hover { border-color: var(--gold); }
+  .check-item.checked { background: rgba(92,122,92,0.06); border-color: var(--sage); }
+  .check-box {
+    width: 20px; height: 20px;
+    border-radius: 6px;
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+    transition: all 0.2s;
+    font-size: 11px;
+    color: white;
+  }
+  .check-item.checked .check-box {
+    background: var(--sage);
+    border-color: var(--sage);
+  }
+  .check-label { font-size: 0.88rem; line-height: 1.5; flex: 1; }
+  .check-item.checked .check-label { text-decoration: line-through; color: var(--muted); }
+  .check-sub { font-size: 0.77rem; color: var(--muted); margin-top: 2px; display: block; }
+  .check-item.checked .check-sub { text-decoration: none; }
+  .progress-bar-wrap {
+    background: rgba(26,46,26,0.08);
+    border-radius: 100px;
+    height: 6px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    border-radius: 100px;
+    background: linear-gradient(90deg, var(--sage), var(--gold));
+    transition: width 0.4s ease;
+  }
+  .progress-label {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  /* BUDGET */
+  .budget-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .budget-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+  }
+  .budget-card .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; }
+  .budget-card .amount { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; margin-top: 4px; }
+  .budget-card.total .amount { color: var(--coral); }
+  .budget-card.spent .amount { color: var(--sage); }
+  .budget-card.remain .amount { color: var(--ocean); }
+
+  .budget-table { width: 100%; border-collapse: collapse; }
+  .budget-table th {
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .budget-table td {
+    padding: 12px 14px;
+    font-size: 0.88rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  .budget-table tr:last-child td { border-bottom: none; }
+  .budget-table tr { background: var(--card); }
+  .budget-table tbody tr:hover { background: var(--light); }
+  .budget-input {
+    border: none;
+    background: transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    color: var(--deep);
+    width: 100%;
+    outline: none;
+  }
+  .budget-input:focus {
+    background: rgba(201,146,42,0.08);
+    border-radius: 4px;
+    padding: 2px 6px;
+  }
+  .cat-pill {
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-weight: 600;
+  }
+  .cat-flights { background: rgba(27,79,114,0.12); color: var(--ocean); }
+  .cat-accom { background: rgba(201,146,42,0.12); color: var(--gold); }
+  .cat-activities { background: rgba(92,122,92,0.12); color: var(--sage); }
+  .cat-food { background: rgba(224,92,58,0.12); color: var(--coral); }
+  .cat-transport { background: rgba(26,46,26,0.1); color: var(--deep); }
+  .add-expense-btn {
+    margin-top: 14px;
+    background: none;
+    border: 1.5px dashed var(--border);
+    color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s;
+  }
+  .add-expense-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* TIPS */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  .tip-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+  }
+  .tip-icon { font-size: 1.6rem; margin-bottom: 10px; display: block; }
+  .tip-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+  .tip-card p { font-size: 0.84rem; line-height: 1.6; color: #444; }
+  .tip-card ul { font-size: 0.84rem; line-height: 1.7; color: #444; padding-left: 16px; }
+  .tip-card.highlight { background: var(--deep); color: var(--sand); border-color: var(--deep); }
+  .tip-card.highlight h3 { color: var(--gold); }
+  .tip-card.highlight p, .tip-card.highlight ul { color: rgba(245,237,216,0.8); }
+
+  /* TABLE WRAP */
+  .table-wrap {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="hero-flag">🇦🇺</span>
+  <h1>Family <em>Australia</em><br>Adventure</h1>
+  <p class="hero-sub">Second Brain — Trip Planner</p>
+  <div class="hero-dates">
+    <span class="dot"></span>
+    Dec 18, 2026 → Jan 1, 2027 &nbsp;·&nbsp; 14 Nights &nbsp;·&nbsp; Seattle ✈ Brisbane · Cairns · Sydney ✈ Seattle
+  </div>
+</div>
+
+<nav class="nav-wrap">
+  <button class="tab-btn active" onclick="showTab(&#39;itinerary&#39;, this)">📅 Itinerary</button>
+  <button class="tab-btn" onclick="showTab(&#39;booking&#39;, this)">✅ Booking Checklist</button>
+  <button class="tab-btn" onclick="showTab(&#39;packing&#39;, this)">🧳 Packing List</button>
+  <button class="tab-btn" onclick="showTab(&#39;budget&#39;, this)">💰 Budget Tracker</button>
+  <button class="tab-btn" onclick="showTab(&#39;tips&#39;, this)">💡 Tips &amp; Reminders</button>
+</nav>
+
+<div class="main">
+
+  <!-- ===== ITINERARY ===== -->
+  <div id="itinerary" class="section active">
+    <div class="sec-header">
+      <h2>14-Night Itinerary</h2>
+      <span class="sec-badge">Family</span>
+    </div>
+
+    <!-- TRAVEL DAY -->
+    <div class="city-block">
+      <div class="city-label">
+        <h3>✈️ Seattle → Brisbane</h3>
+        <span class="city-tag tag-brisbane">Dec 18 Depart · Dec 20 Arrive</span>
+      </div>
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">—</div>
+          <div class="day-info"><strong>Depart Seattle (SEA)</strong><span>Dec 18 · Long-haul flight</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">Dec 18</span><div class="act-dot"></div><div><div class="act-text">Depart Seattle-Tacoma (SEA). Typical routing: SEA → SYD or SEA → BNE via LAX or SFO</div><div class="act-tip">💡 Flight is ~17–20 hrs total. You cross the International Date Line and SKIP Dec 19!</div></div></div>
+          <div class="activity"><span class="act-time">Dec 20</span><div class="act-dot"></div><div><div class="act-text">Land in Brisbane (BNE) — immigration, luggage, transfer to hotel</div><div class="act-tip">💡 Brisbane airport is ~30 min from the CBD via Airtrain (~$20 AUD) or Uber</div></div></div>
+          <div class="activity"><span class="act-time">Evening</span><div class="act-dot"></div><div><div class="act-text">Easy first night — settle in, grab dinner nearby, rest!</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BRISBANE -->
+    <div class="city-block">
+      <div class="city-label">
+        <h3>🌇 Brisbane &amp; Queensland</h3>
+        <span class="city-tag tag-brisbane">Dec 20–23 · 3 Nights</span>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">1</div>
+          <div class="day-info"><strong>South Bank &amp; City Explore</strong><span>Dec 20 · Settle &amp; explore</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">Morning</span><div class="act-dot"></div><div><div class="act-text">Rest and recover from the long flight — gentle start!</div></div></div>
+          <div class="activity"><span class="act-time">Afternoon</span><div class="act-dot"></div><div><div class="act-text"><strong>South Bank Parklands</strong> — free beach lagoon in the city, perfect for kids. Walk the river promenade</div><div class="act-tip">💡 Rated 4.8/5 — one of Brisbane's absolute best free attractions</div></div></div>
+          <div class="activity"><span class="act-time">Evening</span><div class="act-dot"></div><div><div class="act-text">Dinner at South Bank — dozens of restaurants right along the river</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">2</div>
+          <div class="day-info"><strong>Lone Pine + Wheel of Brisbane</strong><span>Dec 21 · Wildlife &amp; Views</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">9:00 AM</span><div class="act-dot"></div><div><div class="act-text"><strong>Lone Pine Koala Sanctuary</strong> — world's largest koala sanctuary. Hold a koala, hand-feed kangaroos</div><div class="act-tip">💡 ~$60 AUD adults, ~$40 kids. Allow 3 hrs. Book online for discount!</div></div></div>
+          <div class="activity"><span class="act-time">1:00 PM</span><div class="act-dot"></div><div><div class="act-text">Lunch near South Bank</div></div></div>
+          <div class="activity"><span class="act-time">3:00 PM</span><div class="act-dot"></div><div><div class="act-text"><strong>Wheel of Brisbane</strong> — 60m Ferris wheel, air-conditioned gondolas, stunning city views</div></div></div>
+          <div class="activity"><span class="act-time">Evening</span><div class="act-dot"></div><div><div class="act-text">Stroll the Brisbane CBD — Queen Street Mall, Eagle Street Pier</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">3</div>
+          <div class="day-info"><strong>Redcliffe Beach + Museum</strong><span>Dec 22 · Beach &amp; Culture</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">Morning</span><div class="act-dot"></div><div><div class="act-text"><strong>Suttons Beach, Redcliffe</strong> (~45 min drive) — beautiful calm family beach with lagoon &amp; BBQ areas</div><div class="act-tip">💡 Sunday markets at Redcliffe are great for food &amp; souvenirs!</div></div></div>
+          <div class="activity"><span class="act-time">Afternoon</span><div class="act-dot"></div><div><div class="act-text"><strong>Museum of Brisbane</strong> (free!) — inside the stunning City Hall, kid-friendly exhibits</div></div></div>
+          <div class="activity"><span class="act-time">Evening</span><div class="act-dot"></div><div><div class="act-text">Pack bags — fly to Cairns tomorrow morning!</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAIRNS -->
+    <div class="city-block">
+      <div class="city-label">
+        <h3>🐠 Cairns &amp; Great Barrier Reef</h3>
+        <span class="city-tag tag-cairns">Dec 23–27 · 4 Nights</span>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">4</div>
+          <div class="day-info"><strong>Fly to Cairns + Arrive</strong><span>Dec 23 · Esplanade Lagoon</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">Morning</span><div class="act-dot"></div><div><div class="act-text">Fly Brisbane → Cairns (~2 hrs — Qantas or Virgin)</div></div></div>
+          <div class="activity"><span class="act-time">Afternoon</span><div class="act-dot"></div><div><div class="act-text"><strong>Cairns Esplanade Lagoon</strong> — free public pool on the waterfront, beautiful for families</div></div></div>
+          <div class="activity"><span class="act-time">Evening</span><div class="act-dot"></div><div><div class="act-text">Cairns Night Markets — great variety of food, open air, fun for kids</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">5</div>
+          <div class="day-info"><strong>Great Barrier Reef — Full Day</strong><span>Dec 24 · Christmas Eve on the Reef!</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">7:30 AM</span><div class="act-dot"></div><div><div class="act-text"><strong>Ocean Free &amp; Ocean Freedom Tour</strong> — full day at Upolu Reef + Green Island. Snorkeling, glass-bottom boat, optional scuba</div><div class="act-tip">💡 Rated 4.9/5 — highest-rated reef tour in Cairns. Book MONTHS ahead!</div></div></div>
+          <div class="activity"><span class="act-time">5:00 PM</span><div class="act-dot"></div><div><div class="act-text">Return to Cairns — Christmas Eve dinner by the water 🎄</div><div class="act-tip">💡 Book a Christmas Eve restaurant now — fills up fast!</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">6</div>
+          <div class="day-info"><strong>🎄 Christmas Day</strong><span>Dec 25 · Tropical Christmas!</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">Morning</span><div class="act-dot"></div><div><div class="act-text">Christmas morning — open gifts at the hotel! 🎁</div></div></div>
+          <div class="activity"><span class="act-time">Afternoon</span><div class="act-dot"></div><div><div class="act-text"><strong>Green Island day trip</strong> or relaxed beach day at Cairns Esplanade Lagoon</div></div></div>
+          <div class="activity"><span class="act-time">Evening</span><div class="act-dot"></div><div><div class="act-text">Christmas Day dinner — book a buffet or special menu weeks in advance</div><div class="act-tip">💡 Many waterfront restaurants do gorgeous Xmas Day spreads</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">7</div>
+          <div class="day-info"><strong>Daintree Rainforest Day Tour</strong><span>Dec 26 · Ancient Wilderness</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">All day</span><div class="act-dot"></div><div><div class="act-text"><strong>Daintree Rainforest guided tour</strong> — world's oldest tropical rainforest (180M yrs old!). Spot cassowaries, crocs, rare birds</div><div class="act-tip">💡 Book a guided tour from Cairns — includes Cape Tribulation beach stop</div></div></div>
+          <div class="activity"><span class="act-time">Highlight</span><div class="act-dot"></div><div><div class="act-text">Cape Tribulation — where the rainforest meets the Great Barrier Reef! Swim on a stunning secluded beach</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SYDNEY -->
+    <div class="city-block">
+      <div class="city-label">
+        <h3>🦁 Sydney &amp; NSW</h3>
+        <span class="city-tag tag-sydney">Dec 27–Jan 1 · 5 Nights</span>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">8</div>
+          <div class="day-info"><strong>Fly to Sydney + Arrive</strong><span>Dec 27 · Travel Day</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">Morning</span><div class="act-dot"></div><div><div class="act-text">Fly Cairns → Sydney (~3 hrs)</div></div></div>
+          <div class="activity"><span class="act-time">Afternoon</span><div class="act-dot"></div><div><div class="act-text">Check into hotel — Circular Quay or Darling Harbour recommended for families</div></div></div>
+          <div class="activity"><span class="act-time">Evening</span><div class="act-dot"></div><div><div class="act-text">Walk along the Sydney Harbour foreshore — Opera House at night is magical!</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">9</div>
+          <div class="day-info"><strong>Sydney Wildlife Day</strong><span>Dec 28 · Featherdale + Shark Beach</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">9:00 AM</span><div class="act-dot"></div><div><div class="act-text"><strong>Featherdale Wildlife Park</strong> — hand-feed kangaroos, wombats, and get the Koala Photo Experience</div><div class="act-tip">💡 Book $40 Koala Experience in advance at featherdale.com.au</div></div></div>
+          <div class="activity"><span class="act-time">2:00 PM</span><div class="act-dot"></div><div><div class="act-text"><strong>Shark Beach (Nielsen Park)</strong> — calm, shark-netted harbour beach with city views &amp; a cafe</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">10</div>
+          <div class="day-info"><strong>Sydney City Icons</strong><span>Dec 29 · Opera House, Harbour &amp; Bondi</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">10:00 AM</span><div class="act-dot"></div><div><div class="act-text"><strong>Sydney Opera House</strong> &amp; Circular Quay — walk the forecourt, take iconic photos</div></div></div>
+          <div class="activity"><span class="act-time">12:00 PM</span><div class="act-dot"></div><div><div class="act-text">Harbour ferry ride — catch a ferry to Manly or Watsons Bay for lunch</div></div></div>
+          <div class="activity"><span class="act-time">3:00 PM</span><div class="act-dot"></div><div><div class="act-text"><strong>Bondi Beach</strong> — iconic swim, people-watch, grab an ice cream</div><div class="act-tip">💡 Go early afternoon — less crowded than morning</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">11</div>
+          <div class="day-info"><strong>Taronga Zoo + Parsley Bay</strong><span>Dec 30 · Animals &amp; Beach</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">9:30 AM</span><div class="act-dot"></div><div><div class="act-text"><strong>Taronga Zoo</strong> — stunning harbour views + native Australian animals. Ferry access from Circular Quay</div><div class="act-tip">💡 Allow a full morning — huge zoo with giraffes, elephants &amp; Aussie wildlife</div></div></div>
+          <div class="activity"><span class="act-time">2:00 PM</span><div class="act-dot"></div><div><div class="act-text"><strong>Parsley Bay Reserve</strong> — sheltered harbour beach, shallow water perfect for kids, free entry</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">12</div>
+          <div class="day-info"><strong>🎉 New Year's Eve in Sydney!</strong><span>Dec 31 · World's Best NYE!</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">Daytime</span><div class="act-dot"></div><div><div class="act-text">Rest up — big night ahead! Scope out your fireworks spot early</div></div></div>
+          <div class="activity"><span class="act-time">6:00 PM</span><div class="act-dot"></div><div><div class="act-text">Head to your NYE vantage point — Circular Quay, Mrs Macquarie's Chair, or Bradleys Head</div><div class="act-tip">💡 Sydney NYE is world-famous! Family fireworks at 9 PM — perfect for kids. Midnight show is iconic!</div></div></div>
+          <div class="activity"><span class="act-time">9:00 PM</span><div class="act-dot"></div><div><div class="act-text">🎆 Family fireworks over Sydney Harbour Bridge — one of the world's greatest spectacles!</div></div></div>
+          <div class="activity"><span class="act-time">Midnight</span><div class="act-dot"></div><div><div class="act-text">🎆 Midnight fireworks — Happy New Year! Welcome 2027!</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-card" onclick="toggleDay(this)">
+        <div class="day-header">
+          <div class="day-num">13</div>
+          <div class="day-info"><strong>New Year's Day + Fly Home</strong><span>Jan 1 · Depart Sydney</span></div>
+          <span class="day-chevron">▼</span>
+        </div>
+        <div class="day-body">
+          <div class="activity"><span class="act-time">Morning</span><div class="act-dot"></div><div><div class="act-text">Slow start — New Year's Day breakfast, pack up, check out</div></div></div>
+          <div class="activity"><span class="act-time">Afternoon</span><div class="act-dot"></div><div><div class="act-text">Head to Sydney Airport (SYD) — depart for Seattle</div><div class="act-tip">💡 You cross the date line heading east — you'll arrive back in Seattle on Jan 1 too! (~15–17 hrs)</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BOOKING CHECKLIST ===== -->
+  <div id="booking" class="section">
+    <div class="sec-header">
+      <h2>Booking Checklist</h2>
+      <span class="sec-badge">Do This Now!</span>
+    </div>
+    <div class="progress-label" id="booking-pct">0 of 17 complete (0%)</div>
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" id="booking-bar" style="width:0%"></div></div>
+
+    <div class="checklist-group">
+      <h3>🛂 Documents &amp; Visas</h3>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Apply for Australian ETA (eVisitor / subclass 601)
+          <span class="check-sub">Apply at eta.homeaffairs.gov.au — required for US/UK/EU citizens. ~$20 AUD fee.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Check all passports valid 6+ months beyond Jan 2, 2027
+          <span class="check-sub">Renew early — passport offices are backed up. Kids' passports expire faster!</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Get travel insurance for the whole family
+          <span class="check-sub">Look for policies covering cancellation, medical, and adventure activities (reef diving).</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-group">
+      <h3>✈️ Flights</h3>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book international flight: Seattle (SEA) → Brisbane (BNE) Dec 18
+          <span class="check-sub">~17–20 hrs via LAX or SFO. You arrive Dec 20 due to the date line — no Dec 19!</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book domestic flight: Brisbane → Cairns (Dec 23)
+          <span class="check-sub">~2 hr flight. Qantas, Jetstar, or Virgin Australia.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book domestic flight: Cairns → Sydney (Dec 27)
+          <span class="check-sub">~3 hr flight. Book early for best family seating.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book return flight: Sydney (SYD) → Seattle (SEA) Jan 1
+          <span class="check-sub">~15–17 hrs. You gain back the day crossing the date line — arrive Jan 1 in Seattle!</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-group">
+      <h3>🏨 Accommodation</h3>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book Brisbane hotel (Dec 20–23, 3 nights)
+          <span class="check-sub">South Bank or CBD area — walking distance to Parklands and restaurants.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book Cairns hotel (Dec 23–27, 4 nights)
+          <span class="check-sub">Esplanade area recommended — walkable to restaurants and the lagoon.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book Sydney hotel (Dec 27–Jan 1, 5 nights)
+          <span class="check-sub">Circular Quay or Darling Harbour — NYE proximity is KEY. Book 6+ months ahead for NYE!</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-group">
+      <h3>🎯 Activities &amp; Tours</h3>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book Lone Pine Koala Sanctuary, Brisbane (Dec 21)
+          <span class="check-sub">lonepinekoalasanctuary.com — ~$60 adults/$40 kids. Book online for discount.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book Ocean Free/Freedom Reef Tour, Cairns (Dec 24)
+          <span class="check-sub">cairnspremierreefislandtours.com — most popular operator, fills fast over holidays!</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book Daintree Rainforest Day Tour, Cairns (Dec 26)
+          <span class="check-sub">Guided tours depart from Cairns — includes Cape Tribulation beach stop.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book Featherdale Wildlife Park + Koala Experience, Sydney (Dec 28)
+          <span class="check-sub">featherdale.com.au — Koala photo $40/person extra, book ahead.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book Taronga Zoo, Sydney (Dec 30)
+          <span class="check-sub">taronga.org.au — ferry + zoo combo ticket is great value. Book online.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Secure Sydney NYE viewing spot / dinner (Dec 31)
+          <span class="check-sub">Sydney NYE is world-famous — harbourside restaurants book out 3–6 months ahead. Do this NOW!</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this, &#39;booking&#39;)">
+        <div class="check-box">✓</div>
+        <div class="check-label">Book Christmas Day restaurant dinner in Cairns (Dec 25)
+          <span class="check-sub">Popular restaurants fill up weeks in advance — call ahead!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PACKING LIST ===== -->
+  <div id="packing" class="section">
+    <div class="sec-header">
+      <h2>Packing List</h2>
+      <span class="sec-badge">Summer in Australia</span>
+    </div>
+    <div class="progress-label" id="packing-pct">0 of 31 complete (0%)</div>
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" id="packing-bar" style="width:0%"></div></div>
+
+    <div class="checklist-group">
+      <h3>☀️ Beach &amp; Reef Essentials</h3>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">High SPF sunscreen (SPF 50+) — buy extra, Australia's UV is intense</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Reef-safe sunscreen (required near Great Barrier Reef)<span class="check-sub">Chemical sunscreens harm coral — switch for the reef days</span></div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Swimwear (2–3 per person)</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">UV/rash guard swim shirts for kids</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Water shoes / reef shoes</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Snorkeling mask (optional — tour provides gear, but own is more hygienic)</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Waterproof dry bag</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Beach towels (quick-dry)</div></div>
+    </div>
+
+    <div class="checklist-group">
+      <h3>👕 Clothing (Summer — hot &amp; humid)</h3>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Light cotton t-shirts &amp; shorts (5–7 days)</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Summer dresses / lightweight pants</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">1 smart-casual outfit for NYE &amp; Christmas dinner</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Light cardigan/layer (Melbourne evenings can be cool)</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Wide-brim sun hats (1 per person!)</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Comfortable walking shoes / sandals</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Flip flops / thongs (as Aussies call them!)</div></div>
+    </div>
+
+    <div class="checklist-group">
+      <h3>🏥 Health &amp; Safety</h3>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Insect repellent (DEET) — essential in Cairns &amp; Daintree</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">After-sun aloe vera gel</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Motion sickness tablets (reef boat trips)</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Prescription meds (+ 2-week extra supply)</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Basic first aid / blister kit</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Sunglasses with UV protection (all family members)</div></div>
+    </div>
+
+    <div class="checklist-group">
+      <h3>📱 Tech &amp; Documents</h3>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Australian power adapter (Type I, 230V)</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Portable phone charger / power bank</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">International SIM or roaming plan activated</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Underwater/waterproof camera or phone case</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Printed copies of all bookings + passports (keep separate from originals)</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Travel insurance documents</div></div>
+    </div>
+
+    <div class="checklist-group">
+      <h3>👶 For the Kids</h3>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Entertainment for long flights (tablets, headphones, games)</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Kid-friendly snacks (for airports/flights)</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Small backpack for day trips (per child)</div></div>
+      <div class="check-item" onclick="toggle(this, &#39;packing&#39;)"><div class="check-box">✓</div><div class="check-label">Reusable water bottles (stay hydrated in the heat!)</div></div>
+    </div>
+  </div>
+
+  <!-- ===== BUDGET TRACKER ===== -->
+  <div id="budget" class="section">
+    <div class="sec-header">
+      <h2>Budget Tracker</h2>
+      <span class="sec-badge">Editable</span>
+    </div>
+
+    <div class="budget-summary">
+      <div class="budget-card total">
+        <div class="label">Total Budget</div>
+        <div class="amount" id="total-budget">$18,550</div>
+      </div>
+      <div class="budget-card spent">
+        <div class="label">Estimated Cost</div>
+        <div class="amount" id="total-spent">$18,550</div>
+      </div>
+      <div class="budget-card remain">
+        <div class="label">Remaining</div>
+        <div class="amount" id="total-remain">$0</div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="budget-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Item</th>
+            <th>Estimated ($USD)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="budget-body">
+          <tr>
+            <td><span class="cat-pill cat-flights">Flights</span></td>
+            <td><input class="budget-input" value="International: Seattle → Brisbane (family)"></td>
+            <td><input class="budget-input" type="number" value="6000" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="Round trip, ~4 people via LAX/SFO"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-flights">Flights</span></td>
+            <td><input class="budget-input" value="Domestic: BNE→CNS + CNS→SYD"></td>
+            <td><input class="budget-input" type="number" value="1200" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="Book early for best prices"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-accom">Hotels</span></td>
+            <td><input class="budget-input" value="Brisbane (3 nights)"></td>
+            <td><input class="budget-input" type="number" value="1050" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="~$350/night, South Bank area"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-accom">Hotels</span></td>
+            <td><input class="budget-input" value="Cairns (4 nights)"></td>
+            <td><input class="budget-input" type="number" value="1200" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="~$300/night, Esplanade area"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-accom">Hotels</span></td>
+            <td><input class="budget-input" value="Sydney (5 nights incl. NYE)"></td>
+            <td><input class="budget-input" type="number" value="2500" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="~$500/night avg — NYE premium near harbour"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-activities">Activities</span></td>
+            <td><input class="budget-input" value="Lone Pine Koala Sanctuary (family)"></td>
+            <td><input class="budget-input" type="number" value="200" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="~$60 adults, $40 kids"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-activities">Activities</span></td>
+            <td><input class="budget-input" value="Great Barrier Reef Tour (family)"></td>
+            <td><input class="budget-input" type="number" value="700" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="Ocean Free full day, ~4 people"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-activities">Activities</span></td>
+            <td><input class="budget-input" value="Daintree Rainforest Tour"></td>
+            <td><input class="budget-input" type="number" value="400" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="Guided day tour, family"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-activities">Activities</span></td>
+            <td><input class="budget-input" value="Featherdale Wildlife Park + Koala"></td>
+            <td><input class="budget-input" type="number" value="200" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="Incl. koala photo experiences"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-activities">Activities</span></td>
+            <td><input class="budget-input" value="Taronga Zoo + Sydney misc activities"></td>
+            <td><input class="budget-input" type="number" value="400" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="Book online for discounts"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-food">Food</span></td>
+            <td><input class="budget-input" value="Meals (all 14 nights, family)"></td>
+            <td><input class="budget-input" type="number" value="2800" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="~$200/day avg. incl. Xmas/NYE dinners"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-transport">Transport</span></td>
+            <td><input class="budget-input" value="Ubers, go card, Opal card, trains"></td>
+            <td><input class="budget-input" type="number" value="600" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="Get go card (BNE) &amp; Opal card (SYD)"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-transport">Transport</span></td>
+            <td><input class="budget-input" value="ETA visas + travel insurance"></td>
+            <td><input class="budget-input" type="number" value="500" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="Budget generously for insurance"></td>
+          </tr>
+          <tr>
+            <td><span class="cat-pill cat-food">Shopping</span></td>
+            <td><input class="budget-input" value="Souvenirs &amp; shopping"></td>
+            <td><input class="budget-input" type="number" value="800" oninput="calcBudget()"></td>
+            <td><input class="budget-input" value="Leave room in suitcase!"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="add-expense-btn" onclick="addRow()">+ Add Item</button>
+
+    <div style="margin-top: 20px; padding: 16px; background: rgba(201,146,42,0.08); border-radius: 12px; border: 1px solid rgba(201,146,42,0.2);">
+      <strong style="font-size:0.88rem;">💱 Currency tip:</strong>
+      <span style="font-size:0.84rem; color:#555; margin-left:6px;">1 USD ≈ 1.55 AUD (check rates closer to trip). Set a daily spending budget in AUD to stay on track locally.</span>
+    </div>
+  </div>
+
+  <!-- ===== TIPS ===== -->
+  <div id="tips" class="section">
+    <div class="sec-header">
+      <h2>Tips &amp; Reminders</h2>
+    </div>
+    <div class="tips-grid">
+      <div class="tip-card highlight">
+        <span class="tip-icon">⚡</span>
+        <h3>Book Everything Early</h3>
+        <p>Dec 20–Jan 1 is peak Australian summer holiday season. Hotels, reef tours, and restaurants fill up months in advance. Start booking NOW — especially Sydney NYE (harbourside hotels/restaurants book out 6 months ahead!) and Christmas Day dinner in Cairns.</p>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-icon">☀️</span>
+        <h3>Sun Safety is Critical</h3>
+        <ul>
+          <li>Australia has the world's highest UV levels</li>
+          <li>Apply SPF 50+ every 2 hours</li>
+          <li>11am–3pm is peak UV — seek shade</li>
+          <li>Kids need hats AND rashguards on beaches</li>
+          <li>Sunscreen is expensive in Australia — bring extra!</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-icon">🦟</span>
+        <h3>Cairns &amp; Bugs</h3>
+        <ul>
+          <li>Cairns is tropical — bring strong DEET repellent</li>
+          <li>Daintree has mosquitoes and sandflies</li>
+          <li>Cover up at dusk especially</li>
+          <li>Check for Ross River virus precautions</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-icon">💳</span>
+        <h3>Money &amp; Payments</h3>
+        <ul>
+          <li>Australia is almost fully cashless — cards work everywhere</li>
+          <li>Notify your bank before travel</li>
+          <li>Get a Wise or Charles Schwab card for no-fee ATM withdrawals</li>
+          <li>Tipping is NOT mandatory in Australia (optional, ~10%)</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-icon">🚌</span>
+        <h3>Getting Around</h3>
+        <ul>
+          <li>Brisbane: Get a <strong>go card</strong> for buses, trains &amp; ferries</li>
+          <li>Sydney: Get an <strong>Opal card</strong> for trains/buses/ferries</li>
+          <li>The free 50c CityHopper ferry in Brisbane is a great river cruise!</li>
+          <li>Uber works well in all 3 cities</li>
+          <li>Airtrain from Brisbane Airport to CBD ~$20 AUD</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-icon">🐊</span>
+        <h3>Wildlife Safety</h3>
+        <ul>
+          <li>Don't swim in estuaries/rivers in Cairns — saltwater crocs!</li>
+          <li>Only swim at patrolled beaches (look for flags)</li>
+          <li>Check for jellyfish advisories — stingers season is Oct–May in QLD</li>
+          <li>Wear stinger suits when snorkeling — tour provides these</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-icon">🎄</span>
+        <h3>Christmas &amp; New Year</h3>
+        <ul>
+          <li>Christmas in Australia = summer! Beach BBQs are the norm</li>
+          <li>Many shops closed Dec 25 &amp; Jan 1 — stock up beforehand</li>
+          <li>Sydney NYE fireworks over the Harbour Bridge = world's best!</li>
+          <li>Family fireworks at 9 PM in Sydney — great for younger kids</li>
+          <li>Book NYE harbourside dinner/viewing 3–6 months ahead</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-icon">📱</span>
+        <h3>Useful Apps</h3>
+        <ul>
+          <li><strong>Translink</strong> — Brisbane public transport</li>
+          <li><strong>Opal Travel</strong> — Sydney public transport</li>
+          <li><strong>Google Maps</strong> — works great in all 3 cities</li>
+          <li><strong>Uber</strong> — rideshare across Australia</li>
+          <li><strong>Zomato / Google</strong> — restaurant bookings</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-icon">🧳</span>
+        <h3>Flying Between Cities</h3>
+        <ul>
+          <li>Arrive 90 min before domestic flights (security is quick)</li>
+          <li>Qantas has the best family amenities on domestic routes</li>
+          <li>Jetstar is cheaper but check baggage fees — can add up!</li>
+          <li>All 3 airports have family lanes at security</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-icon">🌊</span>
+        <h3>Great Barrier Reef Tips</h3>
+        <ul>
+          <li>Book morning tours — afternoon seas get choppier</li>
+          <li>Take motion sickness meds the night before if susceptible</li>
+          <li>Underwater cameras/GoPros are worth renting on the boat</li>
+          <li>Use reef-safe sunscreen ONLY — protect the coral!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+function toggleDay(card) {
+  card.classList.toggle('open');
+}
+
+// Checklist logic
+const counts = { booking: 0, packing: 0 };
+
+function toggle(el, group) {
+  el.classList.toggle('checked');
+  updateProgress(group);
+}
+
+function updateProgress(group) {
+  const items = document.querySelectorAll(`#${group} .check-item`);
+  const done = document.querySelectorAll(`#${group} .check-item.checked`).length;
+  const total = items.length;
+  const pct = total ? Math.round((done / total) * 100) : 0;
+  document.getElementById(`${group}-bar`).style.width = pct + '%';
+  document.getElementById(`${group}-pct`).textContent = `${done} of ${total} complete (${pct}%)`;
+}
+
+// Budget logic
+function calcBudget() {
+  const inputs = document.querySelectorAll('#budget-body input[type="number"]');
+  let total = 0;
+  inputs.forEach(i => total += parseFloat(i.value) || 0);
+  document.getElementById('total-spent').textContent = '$' + total.toLocaleString();
+  document.getElementById('total-budget').textContent = '$' + total.toLocaleString();
+  document.getElementById('total-remain').textContent = '$0';
+}
+
+function addRow() {
+  const tbody = document.getElementById('budget-body');
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td><span class="cat-pill cat-food">Other</span></td>
+    <td><input class="budget-input" value="New item" placeholder="Description"></td>
+    <td><input class="budget-input" type="number" value="0" oninput="calcBudget()"></td>
+    <td><input class="budget-input" value="" placeholder="Notes"></td>
+  `;
+  tbody.appendChild(tr);
+  calcBudget();
+}
+
+// Init
+window.onload = () => {
+  calcBudget();
+  updateProgress('booking');
+  updateProgress('packing');
+};
+</script>
+
+
+</body></html>
